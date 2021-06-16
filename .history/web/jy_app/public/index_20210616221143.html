@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta content="telephone=no" name="format-detection" />
+  <meta name="huaban" content="nopin" />
+  <link rel="icon" type="image/x-icon" href="../public/favicon.ico" rel="external nofollow">
+  <title>嘉逸博客</title></title>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- 
+ 在iphone 5 中1rem=16px; 
+ html font-size =16px=1rem;
+ -->
+  <script>
+    // 得到手机屏幕的宽度
+    let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+    console.log('手机屏幕的宽度', htmlWidth)
+
+    // 得到屏幕的高度
+
+    // 得到html的Dom元素
+    let htmlDom = document.getElementsByTagName('html')[0];
+    // if(htmlWidth>640){//超过640大小的，字体根部都是16px
+    // htmlWidth=640;
+    // console.log('htmlWidth-true',htmlWidth)
+    // }
+    // 设置根元素字体大小
+    htmlDom.style.fontSize = htmlWidth / 40 + 'px';
+  </script>
+</body>
+
+</html>
