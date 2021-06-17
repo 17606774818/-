@@ -18,9 +18,14 @@ import 'vant/lib/index.css';
 Vue.use(Vant)
 
 // 导入字体图标
-import '../public/font/iconfont.css'
+import '@/assets/font/iconfont.css'
 // 导入全局样式表
-import '../public/css/index.css'
+import '@/assets/css/index.css'
+
+// 图片滑动组件
+import vueSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'  //引入样式
+Vue.use(vueSwiper)
 
 new Vue({
   router,

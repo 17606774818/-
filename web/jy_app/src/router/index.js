@@ -29,6 +29,13 @@ const routes = [
       return import('@/views/main/news.vue');
     },
   },{
+    // 发布
+    path: '/release',
+    name: 'release',
+    component: () => {
+      return import('@/views/main/release.vue');
+    }
+  },{
     // 我的
     path: '/my',
     name: 'my',
@@ -44,7 +51,7 @@ const routes = [
       }
     ]
   },
-  
+
 ]
 
 const router = new VueRouter({
