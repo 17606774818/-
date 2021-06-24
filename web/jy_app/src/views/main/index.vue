@@ -8,7 +8,7 @@
         <van-search
           shape="round"
           style="width: 100%"
-          placeholder="搜索地点、美食、景点等"
+          placeholder="请输入标题或作者或关键字"
           clearable
           show-action
         >
@@ -21,9 +21,9 @@
     </header>
 
     <!-- 内容标签 -->
-    <article>
+    <article class="article">
        <!-- 导航栏 -->
-      <van-tabs v-model="navigation" @change="navigation_chang" swipeable class="van_tabs">
+      <van-tabs v-model="navigation" @change="navigation_chang" swipeable animated sticky> 
         <van-tab :title="item.classification" v-for="item in tabList" :key="item.id">
           <div v-if="classification === item.classification ? true : false" v-for="item in dataList" :key="item.id">
             <!--刷新效果-->
@@ -39,6 +39,9 @@
                 @load="onLoad"
               >
                 <m-follow v-if="classification === '关注' ? true : false"></m-follow>
+                <m-recommend v-if="classification === '推荐' ? true : false"></m-recommend>
+                <m-host_list v-if="classification === '热榜' ? true : false"></m-host_list>
+                <m-q-a v-if="classification === '问答' ? true : false"></m-q-a>
               </van-list>
             </van-pull-refresh>
           </div>
@@ -50,9 +53,12 @@
 
 <script>
   import MFollow from './components/follow/follow.vue'
+  import MRecommend from './components/recommend/recommend.vue'
+  import MHost_list from './components/host_list/host_list.vue'
+  import MQA from './components/Q&A/q&a.vue'
   export default {
     // import引入的组件需要注入到对象中才能使用
-    components: {MFollow},
+    components: {MFollow,MRecommend,MHost_list,MQA},
     // 这里存放数据
     data () {
       return {
@@ -88,10 +94,6 @@
           id:1,
           classification:'推荐',
           text:'222',
-        },{
-          id:2,
-          classification:'推荐',
-          text:'333',
         },{
           id:3,
           classification:'热榜',
@@ -151,7 +153,8 @@
     // 监听属性 类似于data概念
     computed: {},
     // 监控data中的数据变化
-    watch: {},
+    watch: {
+    },
   }
 </script>
 
@@ -163,4 +166,6 @@
       color: red;
     }
   }
+</style>
+<style >
 </style>

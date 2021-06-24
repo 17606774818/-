@@ -27,13 +27,6 @@ const routes = [
     name: 'news',
     component: () => {
       return import('@/views/main/news.vue');
-    },
-  },{
-    // 发布
-    path: '/release',
-    name: 'release',
-    component: () => {
-      return import('@/views/main/release.vue');
     }
   },{
     // 我的
@@ -50,7 +43,21 @@ const routes = [
         component: () =>  import('@/views/user/login.vue'),
       }
     ]
-  },
+  }, {
+    // 博文发布
+    path:'/put_tquestions',
+    name: 'put_tquestions',
+    component: () => {
+      return import("@/views/release/put_tquestions.vue")
+    }
+  }, {
+    // 提问
+    path: '/writing',
+    name: 'writing',
+    component: () => {
+      return import("@/views/release/writing.vue")
+    }
+  }
 
 ]
 

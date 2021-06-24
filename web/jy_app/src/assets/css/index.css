@@ -4,6 +4,8 @@
     padding: 0;
     /* CSS3 盒子模型 */
     box-sizing: border-box;
+    /* 解决滑动时触发的警告 */
+    touch-action: pan-y;
 }
 
 /* em 和 i 斜体的文字不倾斜 */

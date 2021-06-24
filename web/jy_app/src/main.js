@@ -24,8 +24,16 @@ import '@/assets/css/index.css'
 
 // 图片滑动组件
 import vueSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css'  //引入样式
+import 'swiper/css/swiper.css'  //引入样式
 Vue.use(vueSwiper)
+
+//引入插件核心文件
+import VueQuillEditor from 'vue-quill-editor'
+//引入插件样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+Vue.use(VueQuillEditor);
 
 new Vue({
   router,

@@ -1,25 +1,14 @@
-<!-- 关注 -->
+<!-- 推荐 -->
 <template>
   <div class="box" >
-    <div v-for="item in 5">
+    <div v-for="item in 2">
       <!-- 头部标签 -->
       <header >
-        <van-image
-          class="img"
-          round
-          width="8vw"
-          height="8vw"
-          src="https://img01.yzcdn.cn/vant/cat.jpeg"
-        />
-        <div class="info">
-          <p>这个是名称</p>
-          <p>2021年 09月25日 05:25分 </p>
-        </div>
+        <p>这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题</p>
       </header>
 
       <!-- 内容标签 -->
       <article>
-        <p>这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题这里是标题</p>
         <!--滑动控件-->
         <swiper :options="swiperOption" ref="mySwiper">
           <!--slides-->
@@ -37,8 +26,10 @@
 
       <!-- 尾部标签 -->
       <footer>
-        <van-button icon="edit" class="btn" size="mini">评论</van-button>
-        <van-button icon="good-job-o" class="btn" size="mini">点赞</van-button>
+        <van-button class="btn" size="mini">我是七个字昵称</van-button>
+        <van-button class="btn" size="mini">0 阅读</van-button>
+        <van-button class="btn" size="mini">·</van-button>
+        <van-button class="btn" size="mini">0 评论</van-button>
       </footer>
     </div>
   </div>
@@ -78,34 +69,16 @@
 .box{
   margin:3vw 4vw;
   header{
-    display: flex;
-    height:11vw;
     margin-bottom: 1vw;
-    .img{
-      margin-top: 2vw;
-    }
-    .info{
-      margin:1vw 2vw;
-      p:first-child{
-        font-weight: 700;
-      }
-      p:last-child{
-        color:#BEBEBE;
-        font-size:3vw;
-      }
-    }
-  }
-  article{
     p{
       font-weight: 700;
-      margin-bottom:1vw;
     }
   }
   footer{
     display: flex;
     border-bottom:0.2667vw solid #f0f0f0 ;
     padding-bottom: 1vw;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
     .btn{
       background-color: transparent;
       color: #c0c0c0;

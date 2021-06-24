@@ -7,16 +7,16 @@
       />
     </div>
     <div class="div">
-      <div class="aaa" id="a">
+      <header class="aaa" id="a">
        aaa
-      </div>
-      <div  class="bbb">
+      </header>
+      <article  class="bbb">
         邮箱登录
-      </div>
+      </article>
     </div>
-    <div class = "ccc" id="c">
+    <footer class = "ccc" id="c">
       aaa
-    </div>
+    </footer>
   </div>
 </template>
 
